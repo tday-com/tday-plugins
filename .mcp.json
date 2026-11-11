@@ -3,9 +3,10 @@
     "tday": {
       "command": "npx",
       "args": [
-        "-g",
+        "--prefix",
+        "~/",
         "-y",
-        "@tday-com/mcp@0.4.10",
+        "@tday-com/mcp@0.4.13",
         "serve"
       ],
       "env": {

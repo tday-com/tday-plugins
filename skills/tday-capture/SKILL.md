@@ -17,8 +17,8 @@ Then carry on with what you were asked; never ask for the prompt again.
 Two tday tools may come first, each only while it is needed. tday_workspace: your coding agent
 started tday outside this repo, so call it with the repo's absolute path before anything else.
 tday_sign_in: this computer has no tday login yet (the tday plugin was installed, not the
-installer); it opens tday's sign-in page in the developer's browser, so call it again until it
-says they are signed in, then carry on.
+installer); it answers a link and a code for the developer to approve on any device signed in to
+tday, so show them both, call it again until it says they are signed in, then carry on.
 
 ## 1. Prepare
 - Signed in to tday (tday_sign_in, or the installer `curl -fsSL https://tday.com/install.sh | bash`),
