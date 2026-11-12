@@ -30,7 +30,7 @@ Then run **Developer: Reload Window** in Cursor.
 
 ### Only the MCP server, in one click
 
-[![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=tday&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyItLXByZWZpeCIsIn4vIiwiLXkiLCJAdGRheS1jb20vbWNwQDAuNC4xMyIsInNlcnZlIl19) [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_tday-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522tday%2522%252C%2522type%2522%253A%2522stdio%2522%252C%2522command%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522--prefix%2522%252C%2522~%252F%2522%252C%2522-y%2522%252C%2522%2540tday-com%252Fmcp%25400.4.13%2522%252C%2522serve%2522%255D%257D)
+[![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=tday&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyItLXByZWZpeCIsIn4vIiwiLXkiLCJAdGRheS1jb20vbWNwQDAuNC4xOCIsInNlcnZlIl19) [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_tday-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522tday%2522%252C%2522type%2522%253A%2522stdio%2522%252C%2522command%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522--prefix%2522%252C%2522~%252F%2522%252C%2522-y%2522%252C%2522%2540tday-com%252Fmcp%25400.4.18%2522%252C%2522serve%2522%255D%257D)
 
 These add the `tday` MCP server alone (no skill or commands) to Cursor or VS Code, pinned to this
 version. Use them or the plugin, not both.
@@ -64,7 +64,7 @@ In Claude Code you can also type `/tday:demo` (optionally with a feature name) o
 ## What it runs and what it sends
 
 - **The tday MCP server.** The plugin adds one MCP server, `tday`, which your agent starts with
-  `npx --prefix ~/ -y @tday-com/mcp@0.4.13 serve`: the [`@tday-com/mcp`](https://www.npmjs.com/package/@tday-com/mcp)
+  `npx --prefix ~/ -y @tday-com/mcp@0.4.18 serve`: the [`@tday-com/mcp`](https://www.npmjs.com/package/@tday-com/mcp)
   package from npm, pinned to that version. It runs on your computer over stdio, in your repo; npx
   resolves it from your home directory so your repo's own package.json is never read. The package is
   published by tday's release workflow only, under its own license.
