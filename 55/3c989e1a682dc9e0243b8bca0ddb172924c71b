@@ -1,0 +1,22 @@
+.claude-plugin/plugin.json
+  h_da61ae801e8c5c 3
+.mcp.json
+  h_da61ae801e8c5c 3-5
+README.md
+  h_da61ae801e8c5c 23,25-26,28,31,34-37,41-46
+commands/demo.md
+  h_da61ae801e8c5c 20
+commands/demos-needed.md
+  h_da61ae801e8c5c 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "553c989e1a682dc9e0243b8bca0ddb172924c71b",
+  "prompts": {},
+  "humans": {
+    "h_da61ae801e8c5c": {
+      "author": "Cyrus Kelly <101790022+cyruskelly@users.noreply.github.com>"
+    }
+  }
+}
