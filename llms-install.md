@@ -15,7 +15,7 @@ records it, and tday adds the voice, cursor, camera and style.
 
 Add this entry to the MCP settings file of the client you run in (for Cline,
 `cline_mcp_settings.json`; Cursor, `~/.cursor/mcp.json`; Claude Code,
-`claude mcp add --scope user tday -- npx --prefix ~/ -y @tday-com/mcp@0.4.18 serve`):
+`claude mcp add --scope user tday -- npx --prefix ~/ -y @tday-com/mcp@0.4.22 serve`):
 
 ```json
 {
@@ -26,7 +26,7 @@ Add this entry to the MCP settings file of the client you run in (for Cline,
         "--prefix",
         "~/",
         "-y",
-        "@tday-com/mcp@0.4.18",
+        "@tday-com/mcp@0.4.22",
         "serve"
       ]
     }
@@ -35,7 +35,7 @@ Add this entry to the MCP settings file of the client you run in (for Cline,
 ```
 
 It starts the [`@tday-com/mcp`](https://www.npmjs.com/package/@tday-com/mcp) package from npm, pinned to
-version 0.4.18, over stdio. `--prefix ~/` (npm expands the `~/` itself, on every OS) makes npx
+version 0.4.22, over stdio. `--prefix ~/` (npm expands the `~/` itself, on every OS) makes npx
 resolve it from the home directory, so the repo's own package.json, whose `overrides` could fail npx,
 is never read. Keep any other servers already in the file.
 
@@ -53,7 +53,7 @@ Call `tday_whoami`. It names the developer's tday account and brands. To check t
 and the connection from a terminal instead:
 
 ```bash
-npx --prefix ~/ -y @tday-com/mcp@0.4.18 doctor
+npx --prefix ~/ -y @tday-com/mcp@0.4.22 doctor
 ```
 
 ## Use

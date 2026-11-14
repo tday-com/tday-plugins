@@ -92,6 +92,9 @@ draws the cursor, moves the camera and renders an editable demo. Only the beats 
   where the demo's data will live, what env it runs with, and which outside services its server can
   reach (payments, email, webhooks, a hosted database or queue), each in test mode or left out.
   Wait for their OK when anything is shared or live.
+- Every time you stop for the developer or get stuck before the upload, call demo_status first
+  (waiting or blocked, with the reason and a short note for them): tday shows it on the page they
+  are watching, so they know to come back to you. Call it with continuing when you go on.
 - A SEPARATE demo instance on a free port with a disposable data store and the repo's seed. Never
   restart or reuse the developer's running server, window or data.
 - Before any migration, reset or seed, check which database it points at (the .env files and the
@@ -115,7 +118,7 @@ draws the cursor, moves the camera and renders an editable demo. Only the beats 
 
 ## The tools, in order
 demo_guide, demo_app_notes -> demo_check (tell
-the developer what it found) -> start the demo instance -> demo_start -> demo_fill anything personal -> demo_beat once per narrated line (demo_view looks or acts off camera; demo_discard_beat cuts a
+the developer what it found; demo_status when you wait for them) -> start the demo instance -> demo_start -> demo_fill anything personal -> demo_beat once per narrated line (demo_view looks or acts off camera; demo_discard_beat cuts a
 beat to record again) -> demo_review (fix what it lists) -> demo_upload with the confirmation code,
 no question asked -> demo_finish. demo_features finds the feature (the latest one, the ones without
 a demo, one by name); demo_docs lists the demos the docs still need; demo_embed_docs puts finished
