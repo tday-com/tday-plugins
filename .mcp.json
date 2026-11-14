@@ -1,15 +1,8 @@
 {
   "mcpServers": {
-    "tday": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@tday-com/mcp@0.4.18",
-        "serve"
-      ],
-      "env": {
-        "TDAY_MCP_PLUGIN": "1"
-      }
+    "tday-connector": {
+      "type": "http",
+      "url": "https://tday.com/api/mcp"
     }
   }
 }

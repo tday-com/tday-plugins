@@ -1,6 +1,6 @@
 {
   "name": "tday",
-  "version": "0.4.18",
+  "version": "0.4.21",
   "description": "Record narrated demo videos of your app with your coding agent. Your agent runs the app on your computer and records the demo; tday adds the voice, cursor, camera and style.",
   "author": {
     "name": "tday",

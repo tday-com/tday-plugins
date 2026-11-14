@@ -17,4 +17,4 @@ Record a demo video for tday with the tday MCP tools, from the app in this repo 
 5. Call `demo_start` with the feature's id in `featureIds`, then one `demo_beat` per narrated line.
 6. Call `demo_review` and fix anything it lists. Once it is clean, `demo_upload` with the confirmation code straight away (no need to ask the developer), then `demo_finish`. Tell the developer where the review page is and share the links it returns.
 
-If tday_workspace is in your tools, call it first with this repo's absolute path. If tday_sign_in is in your tools, call it next: this computer is not signed in to tday yet. If no tday tools are listed at all, ask the developer to reload plugins (Claude Code: /reload-plugins) or restart the coding agent.
+If tday_workspace is in your tools, call it first with this repo's absolute path. If tday_sign_in is in your tools, call it next: this computer is not signed in to tday yet. If no demo_* tools are listed, tday's local demo tools are not installed on this computer yet: ask the developer to run `npx -y @tday-com/mcp@latest install` once in a terminal (it signs the computer in to tday and adds them), then type /reload-plugins.

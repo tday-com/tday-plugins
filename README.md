@@ -20,49 +20,30 @@ claude plugin install tday --marketplace tday-com/tday-plugins
 
 Or inside a session: `/plugin marketplace add tday-com/tday-plugins`, then `/plugin install tday@tday`.
 
-### Cursor
-
-```bash
-git clone https://github.com/tday-com/tday-plugins.git ~/.cursor/plugins/local/tday
-```
-
-Then run **Developer: Reload Window** in Cursor.
-
-### Codex
-
-```bash
-codex plugin marketplace add tday-com/tday-plugins
-codex plugin add tday@tday
-```
-
-### Grok Build
-
-```bash
-grok plugin marketplace add tday-com/tday-plugins
-grok plugin install tday
-```
-
 ## First use
 
-Ask your agent to record a demo. The first time, it calls `tday_sign_in`, which shows you a link
-and a code. Open the link on any device where you are signed in to tday (it opens by itself when
-this computer has a browser), check the code matches and choose **Authorize**; the agent carries
-on. It works the same from a sandbox, a cloud machine or over SSH. The sign-in is
-saved in `~/.tday/config.json` on your computer, readable only by you, and every coding agent on
-the computer uses it. It lasts 90 days.
+The plugin connects Claude Code to tday's hosted MCP server, `https://tday.com/api/mcp`. The first time,
+Claude Code opens tday in your browser to sign in and approve it.
 
-In Claude Code you can also type `/tday:demo` (optionally with a feature name) or
-`/tday:demos-needed` to see which features have no demo yet.
+Recording runs on your computer, so the demo tools are a separate one-time install. In a terminal:
+
+```bash
+npx -y @tday-com/mcp@latest install
+```
+
+It signs this computer in to tday and adds the local `tday` server to Claude Code (and Cursor and
+Codex if you use them); then type `/reload-plugins`. Ask your agent to record a demo, or type
+`/tday:demo` (optionally with a feature name) or `/tday:demos-needed` to see which features have no
+demo yet.
 
 ## What it runs and what it sends
 
-- **The tday MCP server.** The plugin adds one MCP server, `tday`, which your agent starts with
-  `npx -y @tday-com/mcp@0.4.18 serve`: the [`@tday-com/mcp`](https://www.npmjs.com/package/@tday-com/mcp)
-  package from npm, pinned to that version. It runs on your computer over stdio, in your repo; npx
-  reads your repo's package.json, so a repo whose `overrides` conflict with a dependency fails
-  with EOVERRIDE; install from the repo's main branch instead, which starts it with
-  `--prefix ~/`. The package is
-  published by tday's release workflow only, under its own license.
+- **The MCP servers.** The plugin adds one, `tday-connector`: tday's hosted server at
+  `https://tday.com/api/mcp`, signed in with OAuth in your browser (your brands, credits and product
+  screens). The demo tools come from the installer above, which adds the
+  [`@tday-com/mcp`](https://www.npmjs.com/package/@tday-com/mcp) package from npm as a local
+  server that runs on your computer over stdio, in your repo. The package is published by tday's
+  release workflow only, under its own license.
 - **What leaves your computer.** The demo footage and the screens you choose to upload, and
   metadata about them (the feature, the steps, the narration). Never your source code, `.env`
   values or secrets: a take with a possible secret on screen is held back until it is fixed. See
