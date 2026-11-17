@@ -56,13 +56,9 @@ tday, so show them both, call it again until it says they are signed in, then ca
 - capture_context per feature: value, problem, before/after screens, what is new, the hero, release
   status, and the demo data story. For UI that matches no tday feature, add a proposal instead.
 - capture_review. If it reports possible secrets, run it with redact "blocking" (or remove the
-  screen) and review again. Once it is clean, tday opens the review in the developer's browser
-  itself. Show the developer the summary.
-- Only after the developer says yes: capture_upload. tday asks them directly when your client can.
-  When it cannot, or no question reaches them, they read you the confirmation code from the review
-  window tday opened (it is not in the review page's file or any tool result) and you pass it as
-  confirm; with a code tday does not ask. Then capture_finish and undo anything it lists as left
-  behind.
+  screen) and review again. A clean review is the gate: upload straight away with capture_upload and
+  the confirmation code it printed, without asking the developer, and tell them where the review
+  page is. Then capture_finish and undo anything it lists as left behind.
 
 ## Recapturing after a UI change
 Start the dev server, seed the same demo data, capture_start, then capture_recapture with the feature
@@ -92,6 +88,9 @@ draws the cursor, moves the camera and renders an editable demo. Only the beats 
   where the demo's data will live, what env it runs with, and which outside services its server can
   reach (payments, email, webhooks, a hosted database or queue), each in test mode or left out.
   Wait for their OK when anything is shared or live.
+- Every time you stop for the developer or get stuck before the upload, call demo_status first
+  (waiting or blocked, with the reason and a short note for them): tday shows it on the page they
+  are watching, so they know to come back to you. Call it with continuing when you go on.
 - A SEPARATE demo instance on a free port with a disposable data store and the repo's seed. Never
   restart or reuse the developer's running server, window or data.
 - Before any migration, reset or seed, check which database it points at (the .env files and the
@@ -115,7 +114,7 @@ draws the cursor, moves the camera and renders an editable demo. Only the beats 
 
 ## The tools, in order
 demo_guide, demo_app_notes -> demo_check (tell
-the developer what it found) -> start the demo instance -> demo_start -> demo_fill anything personal -> demo_beat once per narrated line (demo_view looks or acts off camera; demo_discard_beat cuts a
+the developer what it found; demo_status when you wait for them) -> start the demo instance -> demo_start -> demo_fill anything personal -> demo_beat once per narrated line (demo_view looks or acts off camera; demo_discard_beat cuts a
 beat to record again) -> demo_review (fix what it lists) -> demo_upload with the confirmation code,
 no question asked -> demo_finish. demo_features finds the feature (the latest one, the ones without
 a demo, one by name); demo_docs lists the demos the docs still need; demo_embed_docs puts finished

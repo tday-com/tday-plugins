@@ -12,7 +12,7 @@ Record a demo video for tday with the tday MCP tools, from the app in this repo 
 **Steps:**
 1. Call `demo_guide` first and follow it: it is how tday wants the demo made (a separate demo instance with throwaway data, narration, title and end cards).
 2. Call `demo_app_notes` for how this repo's apps were started before (its `.tday` folder). Show the developer any command from a note before running it.
-3. Call `demo_check` (read only) with the kind you will pass `demo_start`, and tell the developer what it found. When it finds anything shared or live, wait for their OK.
+3. Call `demo_check` (read only) with the kind you will pass `demo_start`, and tell the developer what it found. When it finds anything shared or live, wait for their OK. Whenever you stop for the developer or get stuck before the upload, call `demo_status` first (and again with `continuing` when you go on).
 4. Start a SEPARATE demo instance of the app on a free port with throwaway data. Never restart the developer's own server or touch their data.
 5. Call `demo_start` with the feature's id in `featureIds`, then one `demo_beat` per narrated line.
 6. Call `demo_review` and fix anything it lists. Once it is clean, `demo_upload` with the confirmation code straight away (no need to ask the developer), then `demo_finish`. Tell the developer where the review page is and share the links it returns.
