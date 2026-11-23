@@ -1,15 +1,15 @@
 {
   "name": "tday",
-  "description": "tday's plugin for coding agents",
+  "description": "tday.com's plugin for coding agents",
   "owner": {
-    "name": "tday",
+    "name": "tday.com",
     "url": "https://tday.com"
   },
   "plugins": [
     {
       "name": "tday",
       "source": "./",
-      "description": "Record narrated demo videos of your app with your coding agent. Your agent runs the app on your computer and records the demo; tday adds the voice, cursor, camera and style.",
+      "description": "Record narrated demo videos of your app with your coding agent. Your agent runs the app on your computer and records the demo; tday.com adds the voice, cursor, camera and style.",
       "category": "productivity",
       "homepage": "https://docs.tday.com/coding-agents"
     }

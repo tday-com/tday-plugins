@@ -1,10 +1,10 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tday",
-  "version": "0.4.26",
-  "description": "Record narrated demo videos of your app with your coding agent. Your agent runs the app on your computer and records the demo; tday adds the voice, cursor, camera and style.",
+  "version": "0.4.34",
+  "description": "Record narrated demo videos of your app with your coding agent. Your agent runs the app on your computer and records the demo; tday.com adds the voice, cursor, camera and style.",
   "author": {
-    "name": "tday",
+    "name": "tday.com",
     "url": "https://tday.com"
   },
   "homepage": "https://docs.tday.com/coding-agents",
@@ -21,15 +21,15 @@
   "extensions": {
     "com.openai": {
       "interface": {
-        "displayName": "tday",
+        "displayName": "tday.com",
         "shortDescription": "Record narrated demo videos of your app",
-        "longDescription": "Record narrated demo videos of your app with your coding agent. Your agent runs the app on your computer and records the demo; tday adds the voice, cursor, camera and style.",
-        "developerName": "tday",
+        "longDescription": "Record narrated demo videos of your app with your coding agent. Your agent runs the app on your computer and records the demo; tday.com adds the voice, cursor, camera and style.",
+        "developerName": "tday.com",
         "category": "Productivity",
         "websiteURL": "https://tday.com",
         "privacyPolicyURL": "https://tday.com/privacy",
         "termsOfServiceURL": "https://tday.com/terms",
-        "defaultPrompt": "Record a tday demo of the newest feature",
+        "defaultPrompt": "Record a tday.com demo of the newest feature",
         "brandColor": "#FFB400",
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/icon.png"

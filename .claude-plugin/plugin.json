@@ -1,9 +1,9 @@
 {
   "name": "tday",
-  "version": "0.4.26",
-  "description": "Record narrated demo videos of your app with your coding agent. Your agent runs the app on your computer and records the demo; tday adds the voice, cursor, camera and style.",
+  "version": "0.4.34",
+  "description": "Record narrated demo videos of your app with your coding agent. Your agent runs the app on your computer and records the demo; tday.com adds the voice, cursor, camera and style.",
   "author": {
-    "name": "tday",
+    "name": "tday.com",
     "url": "https://tday.com"
   },
   "homepage": "https://docs.tday.com/coding-agents",
@@ -17,7 +17,7 @@
     "screen-recording",
     "walkthrough"
   ],
-  "displayName": "tday",
+  "displayName": "tday.com",
   "icon": "./assets/icon.png",
   "documentationUrl": "https://docs.tday.com/coding-agents",
   "supportUrl": "https://tday.com/support",
