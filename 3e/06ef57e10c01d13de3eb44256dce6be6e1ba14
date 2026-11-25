@@ -1,0 +1,14 @@
+skills/tday-capture/SKILL.md
+  h_da61ae801e8c5c 24,119
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3e06ef57e10c01d13de3eb44256dce6be6e1ba14",
+  "prompts": {},
+  "humans": {
+    "h_da61ae801e8c5c": {
+      "author": "Cyrus Kelly <101790022+cyruskelly@users.noreply.github.com>"
+    }
+  }
+}
