@@ -16,6 +16,5 @@ Record a demo video for tday.com with the tday.com MCP tools, from the app in th
 4. Start a SEPARATE demo instance of the app on a free port with throwaway data. Never restart the developer's own server or touch their data.
 5. Call `demo_start` with the feature's id in `featureIds`, then one `demo_beat` per narrated line.
 6. Call `demo_review` and fix anything it lists. Once it is clean, `demo_upload` with the confirmation code straight away (no need to ask the developer), then `demo_finish`. Tell the developer where the review page is and share the links it returns.
-7. If `demo_upload` says the demo can go out on X and LinkedIn, ask the developer whether to post it. On a yes, call `tday_plan_demo_posts` (it saves the posts as drafts for them to review) and give them its review link.
 
 If tday_workspace is in your tools, call it first with this repo's absolute path. If tday_sign_in is in your tools, call it next: this computer is not signed in to tday.com yet. If no demo_* tools are listed, tday.com's local demo tools are not installed on this computer yet: ask the developer to run `npx -y @tday-com/mcp@latest install` once in a terminal (it signs the computer in to tday.com and adds them), then type /reload-plugins.
