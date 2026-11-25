@@ -21,7 +21,7 @@ installer); it answers a link and a code for the developer to approve on any dev
 tday.com, so show them both, call it again until it says they are signed in, then carry on.
 
 ## 1. Prepare
-- Signed in to tday.com (tday_sign_in, or the installer `npx -y @tday-com/mcp@latest install`),
+- Signed in to tday.com (tday_sign_in, or the installer `curl -fsSL https://tday.com/install.sh | bash`),
   no token is needed: the brand is the one connected to this repo's git remote (pass brandId when the developer
   works on several). A capture prompt from a teammate sets TDAY_CAPTURE_TOKEN instead; if that token
   is not in your MCP server's environment, ask the developer to add it (never paste it into files).
@@ -116,7 +116,9 @@ draws the cursor, moves the camera and renders an editable demo. Only the beats 
 demo_guide, demo_app_notes -> demo_check (tell
 the developer what it found; demo_status when you wait for them) -> start the demo instance -> demo_start -> demo_fill anything personal -> demo_beat once per narrated line (demo_view looks or acts off camera; demo_discard_beat cuts a
 beat to record again) -> demo_review (fix what it lists) -> demo_upload with the confirmation code,
-no question asked -> demo_finish.
+no question asked -> demo_finish. When demo_upload says the demo can go out on X and LinkedIn, ask the
+developer whether to post it; on a yes, tday_plan_demo_posts writes the posts and saves them as drafts for
+them to review (give them its review link), and schedules them only when they say so.
 demo_features finds the feature (the latest one, the ones without
 a demo, one by name); demo_docs lists the demos the docs still need; demo_embed_docs puts finished
 ones into the docs source, each under its heading (show the diff, commit only on a yes); demo_worktree
