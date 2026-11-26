@@ -6,7 +6,7 @@
         "--prefix",
         "~/",
         "-y",
-        "@tday-com/mcp@0.4.36",
+        "@tday-com/mcp@0.4.37",
         "serve"
       ],
       "env": {
